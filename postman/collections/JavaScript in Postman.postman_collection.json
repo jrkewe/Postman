@@ -1,0 +1,634 @@
+{
+  "info": {
+    "_postman_id": "cc3fbb70-77a1-47bb-a8d6-c0c52fa4b056",
+    "name": "JavaScript in Postman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authorization",
+      "id": "0e0724e0-da0c-4f8c-9d69-0f2432922f80",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true,
+        "disabledSystemHeaders": {
+          "content-length": true,
+          "content-type": true
+        }
+      },
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n",
+          "options": {
+            "raw": {
+              "language": "javascript"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/instance/license",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "instance",
+            "license"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JavaScript Basics",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "94ad2819-c00c-4435-9788-d2741b3b9f04",
+            "exec": [
+              "// //Redefinition of variables\r",
+              "// var name = \"RCV\"\r",
+              "// var name = \"RCV\"\r",
+              "// console.log(name)\r",
+              "// let firstname = 'RCV'\r",
+              "// console.log(firstname)\r",
+              "// const namefirst = \"ape\"\r",
+              "// console.log(namefirst)\r",
+              "// //Scope of variables\r",
+              "// {\r",
+              "//     var aa = 5;\r",
+              "//     let bb = 10;\r",
+              "//     const cc = 15;\r",
+              "//     console.log(aa, bb, cc);\r",
+              "// }\r",
+              "// console.log(aa);\r",
+              "// //Operators\r",
+              "// let x = 10;\r",
+              "// let y = 15;\r",
+              "// let a = x + y; \r",
+              "// let b = y - x;\r",
+              "// let c = y * x;\r",
+              "// let d = x % y;\r",
+              "// let e = x ** 3; //power\r",
+              "// console.log(e);\r",
+              "// //Assignment\r",
+              "// let f = 10;\r",
+              "// let g = 25;\r",
+              "// g+=5;\r",
+              "// console.log(g);//30 = 25 + 5\r",
+              "// g++;\r",
+              "// console.log(g);//31 = 30 + 1\r",
+              "// //Comparison\r",
+              "// let h = 10;\r",
+              "// let i = 20;\r",
+              "// console.log(h>i);\r",
+              "// console.log(h>=i);\r",
+              "// console.log(h<i);\r",
+              "// console.log(h<=i);\r",
+              "// console.log(h==i);\r",
+              "// console.log(h!=i);\r",
+              "// //String Comparison\r",
+              "// let name1 = \"RCV\";\r",
+              "// let name2 = \"Academy\"\r",
+              "// console.log(name1 > name2);//true \r",
+              "// //Because RCV starts with R and Academy with A, so R > A in the alphabet.\r",
+              "// console.log(name1 + \" \" + name2);//RCV Academy\r",
+              "// console.log(\"Welcome to \" +name1 + \" \" +name2);//Welcome to RCV Academy\r",
+              "// //Functions\r",
+              "// console.log(\"This is log msg\");\r",
+              "// //Definition of Functions\r",
+              "// let message = \"Welcome to RCV Academy\";\r",
+              "// function nameOfTheFunction(parameter){\r",
+              "//     console.log('Message: ' +parameter);\r",
+              "// }\r",
+              "// //calling the function\r",
+              "// nameOfTheFunction(message);\r",
+              "// nameOfTheFunction(\"message\");\r",
+              "// //Return Functions\r",
+              "// function addition(a,b){\r",
+              "//     let sum = a + b;\r",
+              "//     return sum;\r",
+              "// }\r",
+              "// let x = addition(1, 1);\r",
+              "// console.log(x);\r",
+              "// //Arrow Functions\r",
+              "// let addition = (a, b) => {\r",
+              "//     console.log(a + b);\r",
+              "//     return a + b;\r",
+              "// }\r",
+              "\r",
+              "// //or shorter\r",
+              "// addition = (a, b) => a + b;\r",
+              "\r",
+              "// let x = addition(12,13)\r",
+              "\r",
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "06a81720-4d8b-42bb-8cdf-b8b21af623e5",
+            "exec": [
+              "// //Callback functions\r",
+              "// //Definition of functions\r",
+              "// let multiply = (a, b) => console.log(a * b);\r",
+              "// let add = (a,b) => console.log(a + b);\r",
+              "// //Definition of test function\r",
+              "// function test(testname, callbackfunction, a, b){\r",
+              "//     console.log(testname);\r",
+              "//     callbackfunction(a,b)\r",
+              "// }\r",
+              "// //Calling test\r",
+              "// test(\"This is addition test\", add, 10, 20);\r",
+              "\r",
+              "// //Snipets\r",
+              "// pm.test(\"Body matches string\", function () {\r",
+              "//     pm.expect(pm.response.text()).to.include(\"string_you_want_to_search\");\r",
+              "// });\r",
+              "\r",
+              "// pm.test(\"Your test name\", function () {\r",
+              "//     var jsonData = pm.response.json();\r",
+              "//     pm.expect(jsonData.value).to.eql(100);\r",
+              "// });\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "972cfb97-6755-44f2-8f0b-33f7fc7fe0a4",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "javascript"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/project/search",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "project",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JavaScript Array",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "29a4c903-23c8-438b-956e-78bccdf30cd4",
+            "exec": [
+              "//Arrays\r",
+              "const students = ['Josh', 'John', 'Jack', 'Jill'];\r",
+              "console.log(students.length);\r",
+              "console.log(students.push('RCV Academy'));//adding element in the end of an array\r",
+              "console.log(students);\r",
+              "let lastName = students.pop();//removing and returning valuse of the last element\r",
+              "console.log(students);\r",
+              "console.log(lastName);\r",
+              "\r",
+              "students.sort();//sort elements alphabetically\r",
+              "console.log(students);\r",
+              "\r",
+              "\r",
+              "\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "51ded4be-c253-4a6a-aa37-7bc5875ab624",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/project/search",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "project",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JavaScript Objects",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "296295c8-09fc-48af-828f-ad47eb0ad5af",
+            "exec": [
+              "let studentName = \"John\";\r",
+              "let age = 16;\r",
+              "let year = 10;\r",
+              "\r",
+              "const student = {\r",
+              "    studentName: \"John\",\r",
+              "    age: 16,\r",
+              "    year: 10,\r",
+              "    scores:{\r",
+              "        math: 85,\r",
+              "        English: 90,\r",
+              "        Hindi: 85\r",
+              "    }\r",
+              "};\r",
+              "\r",
+              "console.log(student.studentName);\r",
+              "console.log(student['age'])\r",
+              "\r",
+              "//Nested valuse\r",
+              "console.log(student.scores.English);\r",
+              "console.log(student[\"scores\"][\"Hindi\"]);\r",
+              "console.log(student.scores[\"math\"]);\r",
+              "console.log(student[\"scores\"].English)"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "98b499a7-740e-41bd-bbf7-2c4367bc4593",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/project/search",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "project",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JavaScript Objects Mathods",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "36352bd4-af74-4c50-9239-a00cfb2b97c5",
+            "exec": [
+              "let studentName = \"John\";\r",
+              "let age = 16;\r",
+              "let year = 10;\r",
+              "\r",
+              "const student = {\r",
+              "    studentName: \"John\",\r",
+              "    age: 16,\r",
+              "    year: 10,\r",
+              "    welcome: function(){\r",
+              "        console.log(\"Welcome\" + this.studentName);\r",
+              "    }\r",
+              "};\r",
+              "\r",
+              "student.welcome();"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "8c9cbd67-6708-4ade-bb86-3a3240507abd",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/project/search",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "project",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JS stringify and parse",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "9a557b83-c843-4f19-8a29-5a66939ed645",
+            "exec": [
+              "let studentName = \"John\";\r",
+              "let age = 16;\r",
+              "let year = 10;\r",
+              "\r",
+              "const student = {\r",
+              "    studentName: \"John\",\r",
+              "    age: 16,\r",
+              "    year: 10,\r",
+              "    welcome: function(){\r",
+              "        console.log(\"Welcome\" + this.studentName);\r",
+              "    }\r",
+              "};\r",
+              "//Converting JS Object into JSON format\r",
+              "let studentJson = JSON.stringify(student);\r",
+              "console.log(student);\r",
+              "//Converting JSON Format into JS Object \r",
+              "let studentObj = JSON.parse(studentJson);\r",
+              "console.log(studentObj);\r",
+              "//! JSON file cannot save functions, only data."
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "4bf8f688-5ef2-457c-91c1-a7bb6d708729",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/project/search",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "project",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JS Arrays",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "450da4ff-dca5-4350-be66-e9150891dfe7",
+            "exec": [
+              "// //Array\r",
+              "// const students = ['Rama', 'Steve', 'Tom', 'Anna'];\r",
+              "// console.log(students);\r",
+              "// console.log(students[0]);\r",
+              "\r",
+              "//Object\r",
+              "const student = [\r",
+              "    {\r",
+              "        studentName: \"John\",\r",
+              "        age: 16,\r",
+              "        year: 10,\r",
+              "        scores: ['math', 'English', 'Hindi']\r",
+              "    },\r",
+              "    {\r",
+              "        studentName: \"Rama\",\r",
+              "        age: 26,\r",
+              "        year: 20,\r",
+              "        scores: ['math', 'English', 'Hindi']\r",
+              "    }];\r",
+              "\r",
+              "console.log(student);\r",
+              "console.log(student[0]);\r",
+              "console.log(student[0].scores);\r",
+              "console.log(student[0].scores[0]);\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "f77ca593-edb5-493e-8bdd-aa7dc503257b",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/project/search",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "project",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "If Else Conditions",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "30dec9a7-8dcf-4938-a486-d4996e907243",
+            "exec": [
+              "let number = 5;\r",
+              "\r",
+              "if(number <= 5){\r",
+              "    console.log(\"The number is less than 5\");\r",
+              "} else if (number === 5){\r",
+              "    console.log(\"The number is equal to 5\")\r",
+              "} else {\r",
+              "    console.log(\"The number is greater than 5\")\r",
+              "}"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "ee454974-956f-4ded-b7cf-79f134b9c54b",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/project/search",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "project",
+            "search"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

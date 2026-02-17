@@ -1,0 +1,536 @@
+{
+  "info": {
+    "_postman_id": "e86bd619-d1b8-4801-b57b-efc8d349f593",
+    "name": "Jira Issue Creation & Verification",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authorization",
+      "id": "46f06870-c3d2-40f3-adc0-7a99f1e2f87b",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/instance/license",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "instance",
+            "license"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Projects",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "fd778722-604f-471c-b3c7-488771190879",
+            "exec": [
+              "console.clear();\r",
+              "//console.log(pm.globals.get(\"global_url\"));"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "1915882c-a9ed-4ef2-bb79-76a4ab554cc5",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "pm.test(\"Validate the text\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.maxResults).to.eql(50);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "c0736e69-4eb6-4ce4-8c2f-7de234b0b862",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/project/search?maxResults=50",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "project",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "orderBy",
+              "value": "name",
+              "disabled": true
+            },
+            {
+              "key": "id",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "query",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "typekey",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "categoryId",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "action",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "expand",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "status",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "properties",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "propertyQuery",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "maxResults",
+              "value": "50"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Projects Fetching Values",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "a3766d90-bfc3-4f9d-88c5-dd08559884ad",
+            "exec": [
+              "// //Fatching values from the response\r",
+              "// let resp = pm.response.json();\r",
+              "// console.log(resp);\r",
+              "// console.log(resp.maxResults);\r",
+              "// console.log(resp.values[0].key)"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "cc75dbfb-6aa8-4eaa-afff-f18500aa590b",
+            "exec": [
+              "console.clear();\r",
+              "//console.log(pm.globals.get(\"global_url\"));"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "813c2431-3497-4c0b-a98a-f1918b2ef433",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/project/search",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "project",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "query",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "typekey",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "categoryId",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "action",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "expand",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "status",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "properties",
+              "value": "",
+              "disabled": true
+            },
+            {
+              "key": "propertyQuery",
+              "value": "",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Issue Type For Project",
+      "id": "b1f213ce-db49-487f-8fc8-966ef607ecf3",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/issuetype/project?projectId=10068",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "issuetype",
+            "project"
+          ],
+          "query": [
+            {
+              "key": "projectId",
+              "value": "10068"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Users assignable to project",
+      "id": "e6206805-b769-47ff-a161-46e59ef292fc",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/user/assignable/multiProjectSearch?projectKeys=EP",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "user",
+            "assignable",
+            "multiProjectSearch"
+          ],
+          "query": [
+            {
+              "key": "projectKeys",
+              "value": "EP"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Issue",
+      "id": "347d29d1-36bf-49a8-9a47-84bd1cf41525",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"fields\": {\r\n    \"issuetype\": {\r\n      \"id\": \"10016\"\r\n    },\r\n    \"project\": {\r\n      \"id\": \"10068\"\r\n    },\r\n    \"reporter\": {\r\n      \"id\": \"712020:d6cdc6c6-08f2-43d4-8290-800926dda8d8\"\r\n    },\r\n    \"summary\": \"Postman API Testing - Issue created by postman\"\r\n  },\r\n  \"update\": {}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/issue",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "issue"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Issue Creation Verification",
+      "id": "0f628c55-99bf-4351-aefb-f8927410bc46",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/issue/:issueIdOrKey",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "issue",
+            ":issueIdOrKey"
+          ],
+          "variable": [
+            {
+              "key": "issueIdOrKey",
+              "value": "10166"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JS Snippets",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "1a2fd743-bb41-4faf-b06a-cded3b2e65ba",
+            "exec": [
+              "console.log(pm.globals.get(\"test_url\"));"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "815f1617-474e-4a17-9394-82f07eb54667",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "pm.test(\"alidate the text\", function () {\r",
+              "    var jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.value).to.eql(100);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "90e4cb4a-66a8-4032-ae87-0e4eb5a3f3db",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}

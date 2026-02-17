@@ -1,0 +1,116 @@
+{
+  "info": {
+    "_postman_id": "09987994-6172-40d1-8108-b4cdb4e99fa5",
+    "name": "PM Methods",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Authorization",
+      "id": "401e283e-340c-42e9-b130-5e366f403693",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/instance/license",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "instance",
+            "license"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Projects",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "97dc2e1a-80f6-4e99-83d9-9477d4b87854",
+            "exec": [
+              "//Getting valuet through pm\r",
+              "let responseJSON = pm.response.text();\r",
+              "//Parse JSON into JS file\r",
+              "let responseJS = JSON.parse(responseJSON);\r",
+              "// console.log(responseJS);\r",
+              "//Shorter version\r",
+              "let shortJSON = pm.response.json();\r",
+              "console.log(shortJSON.maxResults);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "id": "d55e609e-b1e9-4245-b983-87022f0eec70",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "jrkewelina@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jrkewelinaa.atlassian.net/rest/api/3/project/search?maxResults=50",
+          "protocol": "https",
+          "host": [
+            "jrkewelinaa",
+            "atlassian",
+            "net"
+          ],
+          "path": [
+            "rest",
+            "api",
+            "3",
+            "project",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "maxResults",
+              "value": "50"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
